@@ -1,0 +1,19 @@
+{
+    "name": "brandomeniconi/woocommerce-restricted-states",
+    "description": "Allow to restrict WooCommerce billign and shipping to some specific states",
+    "type": "wordpress-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Brando Meniconi",
+            "email": "meniconi.brando@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.6.2",
+        "phpcompatibility/phpcompatibility-wp": "*",
+        "squizlabs/php_codesniffer": "^3.4.2",
+        "wp-coding-standards/wpcs": "^2.3"
+      }    
+}
