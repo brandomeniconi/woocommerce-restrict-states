@@ -2,10 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce Restrict States\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-31 10:24+0000\n"
-"PO-Revision-Date: 2020-05-31 10:24+0000\n"
+"POT-Creation-Date: 2020-05-31 10:53+0000\n"
+"PO-Revision-Date: 2020-05-31 10:54+0000\n"
 "Last-Translator: \n"
-"Language-Team: Italian\n"
+"Language-Team: Italiano\n"
 "Language: it_IT\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
@@ -14,13 +14,21 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.4.0; wp-5.4"
 
-#: woocommerce-restricted-states.php:58
+#: woocommerce-restricted-states.php:72
 msgid "Sell to specific states"
 msgstr "Vendi in specifiche provincie"
 
-#: woocommerce-restricted-states.php:59
+#: woocommerce-restricted-states.php:73
 msgid "Select the states where you want to sell"
 msgstr "Seleziona le regioni / province dove vuoi vendere"
+
+#: woocommerce-restricted-states.php:115
+msgid "Choose state / regions&hellip;"
+msgstr "Seleziona province / regioni&hellip;"
+
+#: woocommerce-restricted-states.php:115
+msgid "State / Region"
+msgstr "Provincia / Regione"
 
 #. Name of the plugin
 msgid "WooCommerce Restrict States"

@@ -37,6 +37,10 @@ function wrs_countries_allowed_country_states( $countries_allowed_country_states
 
 	$allowed_states = WC_Admin_Settings::get_option( 'woocommerce_specific_allowed_states', array() );
 
+	if ( empty( $allowed_states ) ) {
+		return $countries_allowed_country_states;
+	}
+
 	$countries_allowed_country_states = array();
 
 	foreach ( $allowed_states as $state_string ) {
@@ -108,7 +112,7 @@ function wrs_field_multi_select_states( $value ) {
 			<label for="<?php echo esc_attr( $value['id'] ); ?>"><?php echo esc_html( $value['title'] ); ?> <?php echo $tooltip_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></label>
 		</th>
 		<td class="forminp">
-			<select multiple="multiple" name="<?php echo esc_attr( $value['id'] ); ?>[]" style="width:350px" data-placeholder="<?php esc_attr_e( 'Choose state / regions&hellip;', 'woocommerce' ); // phpcs:ignore WordPress.WP.I18n.TextDomainMismatch ?>" aria-label="<?php esc_attr_e( 'Country / Region', 'woocommerce' ); // phpcs:ignore WordPress.WP.I18n.TextDomainMismatch ?>" class="wc-enhanced-select">
+			<select multiple="multiple" name="<?php echo esc_attr( $value['id'] ); ?>[]" style="width:350px" data-placeholder="<?php esc_attr_e( 'Choose state / regions&hellip;', 'woocommerce-restrict-states' ); ?>" aria-label="<?php esc_attr_e( 'State / Region', 'woocommerce-restrict-states' ); ?>" class="wc-enhanced-select">
 				<?php
 				if ( ! empty( $allowed_countries ) ) {
 					foreach ( $allowed_countries as $country_id => $country_name ) {
