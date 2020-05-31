@@ -139,3 +139,22 @@ function wrs_field_multi_select_states( $value ) {
 	<?php
 }
 
+
+
+add_filter( 'woocommerce_admin_settings_sanitize_option', 'wrs_admin_field_sanitize', 10, 3 );
+
+/**
+ * Sanitize custom admin fields on save
+ *
+ * @param  mixed $value     The incoming field value.
+ * @param  array $option    The field options.
+ * @param  array $raw_value The raw field value.
+ * @return mixed
+ */
+function wrs_admin_field_sanitize( $value, $option, $raw_value ) {
+	if ( 'multi_select_states' === $option['type'] ) {
+		$value = array_filter( array_map( 'wc_clean', (array) $raw_value ) );
+	}
+
+	return $value;
+}
